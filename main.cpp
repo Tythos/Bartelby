@@ -58,6 +58,8 @@ bool mainLoop(App* hApp) {
  */
 int main(int nArgs, char** vArgs) {
 	App* hApp = new App();
+	hApp->setCamPos(10, 0, 0);
+	hApp->setCamLook(0, 0, 0);
 	bool isRunning = true;
 	while (isRunning) {
 		isRunning = mainLoop(hApp);
