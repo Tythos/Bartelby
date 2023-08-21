@@ -37,10 +37,10 @@ bool mainLoop(App* hApp) {
 	bool isRunning = true;
 	SDL_Event event;
 	while (SDL_PollEvent(&event) != 0) {
-		if (event.type == SDL_QUIT) {
+		if (event.type == SDL_EVENT_QUIT) {
 			isRunning = false;
 		}
-		else if (event.type == SDL_TEXTINPUT) {
+		else if (event.type == SDL_EVENT_TEXT_INPUT) {
 			isRunning = onTextInput(event.text.text[0]);
 		}
 	}

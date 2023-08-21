@@ -12,7 +12,7 @@ App::App() {
 	if (SDL_Init(SDL_INIT_VIDEO) < 0) {
 		throw std::runtime_error("SDL initialization failed");
 	}
-	this->window = SDL_CreateWindow("Artemis - Alphonse", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, this->screenWidth, this->screenHeight, SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN);
+	this->window = SDL_CreateWindow("Artemis - Alphonse", this->screenWidth, this->screenHeight, SDL_WINDOW_OPENGL);
 	if (this->window == NULL) {
 		throw std::runtime_error("Window initialization failed");
 	}

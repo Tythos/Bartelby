@@ -31,7 +31,7 @@ Graphics::Graphics() {
 
 	// load and compile vertex shader
 	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
-	std::string vertexString = readFile("../basic.v.glsl");
+	std::string vertexString = readFile("basic.v.glsl");
 	const char* vertexRaw = vertexString.c_str();
 	glShaderSource(vertexShader, 1, &vertexRaw, NULL);
 	glCompileShader(vertexShader);
@@ -45,7 +45,7 @@ Graphics::Graphics() {
 
 	// load and compile fragment shader
 	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-	std::string fragmentString = readFile("../basic.f.glsl");
+	std::string fragmentString = readFile("basic.f.glsl");
 	const char* fragmentRaw = fragmentString.c_str();
 	glShaderSource(fragmentShader, 1, &fragmentRaw, NULL);
 	glCompileShader(fragmentShader);
